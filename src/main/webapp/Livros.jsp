@@ -35,7 +35,9 @@
 </label>
 <br>
 <div class="filter">
+    <form action="LivrosController" method="post">
 
+    </form>
 </div>
 <div class="result"></div>
 </body>
