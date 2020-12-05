@@ -16,12 +16,12 @@
 <body>
     <nav class = "navbar">
         <ul>
-            <li><a href="">Home </a></li>|
-            <li><a href="">Livros </a></li>|
-            <li><a href="">Catálogo </a></li>|
-            <li><a href="">Livrarias </a></li>|
-            <li><a href="">Autor </a></li>|
-            <li><a href="">Jornal</a></li>
+            <li><a href="index.jsp">Home </a></li>|
+            <li><a href="Livros.jsp">Livros </a></li>|
+            <li><a href="Catalogo.jsp">Catálogo </a></li>|
+            <li><a href="Livraria.jsp">Livrarias </a></li>|
+            <li><a href="Autor.jsp">Autor </a></li>|
+            <li><a href="Jornal.jsp">Jornal</a></li>
         </ul>
     </nav>
 
