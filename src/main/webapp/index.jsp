@@ -26,21 +26,28 @@
     </nav>
 
     <div class = "imageDiv">
-        <img src="assets\livro1.jpg">
+        <img src="assets\livro1.jpg" alt="livros em uma mesa">
         <div class="center"><pre> Visualizar os <br>  dez livros <br> mais vendidos</pre></div>
-        <button class="buttonOffset">Ir agora</button>
+        <form action ="LivroController" method="post">
+            <button class="buttonOffset" type="submit" value="REQUEST">Ir agora</button>
+        </form>
     </div>
 
     <div class = "imageDiv">
-        <img src="assets\livraria.jpg">
+        <img src="assets\livraria.jpg" alt="livraria">
         <div class="center"><pre>  Veja aqui uma  <br> Pré-visualização <br>  do catálogo  </pre></div>
-        <button class="buttonOffset">Ir agora</button>
+        <form action ="livrariaController" method="post">
+            <button class="buttonOffset" type="submit" value="REQUEST">Ir agora</button>
+        </form>
     </div>
 
     <div class = "imageDiv">
-        <img src="assets\catalogo.jpg">
+        <img src="assets\catalogo.jpg" alt="catalogo de livros">
         <div class = "center"><pre> Acompanhe a <br> situação das <br>  livrarias  </pre></div>
-        <button class="buttonOffset">Ir agora</button>
+        <form action ="CatalogoController" method="post">
+            <button class="buttonOffset" type="submit" value="REQUEST">Ir agora</button>
+        </form>
+
     </div>
 </body>
 </html>

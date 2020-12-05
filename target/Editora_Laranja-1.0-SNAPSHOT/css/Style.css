@@ -68,12 +68,7 @@ pre{
     font-family: "Lato",sans-serif;
     text-align: center;
 }
-
-button{
-    font-family: "Lato",sans-serif;
-}
-
-.buttonOffset {
+form{
     text-align: center;
     position: relative;
     display: table;
@@ -82,30 +77,11 @@ button{
     padding-left: 20px;
     padding-right: 20px;
     font-size: 18px;
-    background: rgba(236, 238, 167, 0.8);
 }
 
-.buttonOffsetLeft {
-    position: absolute;
-    top: 60%;
-    left: 18%;
-    transform: translate(-50%, -50%);
-    font-size: 18px;
-    background: rgba(236, 238, 167, 0.5);
-    background-blend-mode: overlay;
-}
-
-.buttonOffsetRight {
-    position: absolute;
-    top: 60%;
-    left: 81%;
-    transform: translate(-50%, -50%);
-    font-size: 18px;
-    background: rgba(236, 238, 167, 0.5);
-    background-blend-mode: overlay;
-}
 
 button{
+    font-family: "Lato",sans-serif;
     background: rgba(236, 238, 167, 0);
     color: black;
     padding: 10px 20px;
@@ -114,3 +90,13 @@ button{
     cursor: pointer;
     opacity: 0.9;
 }
+
+
+.buttonOffset {
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+    background: rgba(236, 238, 167, 0.8);
+}
+

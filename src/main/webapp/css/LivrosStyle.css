@@ -1,0 +1,28 @@
+
+.search{
+    position: relative;
+    left: 5%;
+    top: 3%;
+    margin-top: 15px;
+    background-color: #fbf2ea;
+    border: 1px solid rgba(0,0,0,0.7);
+    border-radius: 15px;
+    font-size: 16px;
+    width: 15%;
+}
+
+#ordernar{
+
+}
+
+
+.filter{
+    display: inline-block;
+    top: 5%;
+    margin-left: 50px;
+    width: 15%;
+    height: 400px;
+    background-color: #faefe6;
+    border:3px solid rgba(0,0,0,0.7);
+    border-radius: 25px;
+}
