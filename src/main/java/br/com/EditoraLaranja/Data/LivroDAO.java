@@ -6,6 +6,7 @@ import br.com.EditoraLaranja.Bean.LivroBean;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 public class LivroDAO {
     final private Connection conn;
@@ -23,7 +24,7 @@ public class LivroDAO {
             ps = conn.prepareStatement(sql);
             ps.setString(1,livro.getTitulo());
             ps.setString(2, livro.getDescricao());
-            ps.setString(3, livro.getCategorias().get(1));
+            ps.setString(3, livro.getCategorias());
             ps.execute();
             ps.close();
             System.out.println(livro.getTitulo());
@@ -35,4 +36,24 @@ public class LivroDAO {
 
 
     }
+
+    public ArrayList<LivroBean> retrieve(){
+        String sql = "select * from livro order by titulo asc";
+        ArrayList<LivroBean> livros = new ArrayList<>();
+        try {
+            ps = conn.prepareStatement(sql);
+            rs = ps.executeQuery();
+            ps.close();
+            while (rs.next()){
+                LivroBean temp = new LivroBean(rs.getString("titulo"),rs.getString("descricao"),rs.getString("categoria"));
+                livros.add(temp);
+            }
+
+            return livros;
+        } catch (Exception e) {
+            System.out.println(e);
+            return null;
+        }
+    }
+
 }

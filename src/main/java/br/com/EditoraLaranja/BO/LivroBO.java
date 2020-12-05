@@ -11,7 +11,9 @@ public class LivroBO {
         livros= new ArrayList<>();
     }
 
-
+    public boolean insert(String titulo,String descricao,String categoria){
+        return true;
+    }
 
 
 }

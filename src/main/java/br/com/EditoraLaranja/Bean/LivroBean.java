@@ -7,13 +7,13 @@ public class LivroBean {
     private int idAutor;
     private String titulo;
     private String descricao;
-    private ArrayList<String> categorias;
+    private String categoria;
+    private String dataLancamento;
 
-
-    public LivroBean(String titulo,String descricao,ArrayList<String> categorias){
+    public LivroBean(String titulo,String descricao,String categoria){
         setTitulo(titulo);
         setDescricao(descricao);
-        setCategorias(categorias);
+        setCategorias(categoria);
     }
 
     public int getIdLivro() {
@@ -32,8 +32,8 @@ public class LivroBean {
         return descricao;
     }
 
-    public ArrayList<String> getCategorias() {
-        return categorias;
+    public String getCategorias() {
+        return categoria;
     }
 
     public void setIdLivro(int idLivro) {
@@ -44,6 +44,10 @@ public class LivroBean {
         this.idAutor = idAutor;
     }
 
+    public void setDataLancamento(String data){
+        this.dataLancamento = data;
+    }
+
     private void setTitulo(String titulo) {
         this.titulo = titulo;
     }
@@ -52,7 +56,7 @@ public class LivroBean {
         this.descricao = descricao;
     }
 
-    private void setCategorias(ArrayList<String> categorias) {
-        this.categorias = categorias;
+    private void setCategorias(String categorias) {
+        this.categoria = categorias;
     }
 }
