@@ -1,22 +1,38 @@
 
 .search{
     position: relative;
-    left: 5%;
+    left: 10%;
     top: 3%;
     margin-top: 15px;
     background-color: #fbf2ea;
     border: 1px solid rgba(0,0,0,0.7);
     border-radius: 15px;
-    font-size: 16px;
+    font-size: 20px;
+    font-family: Lato;
     width: 15%;
 }
 
-#ordernar{
+#ordernarLabel{
+    position: relative;
+    left: 65%;
+    top: 3%;
+    font-family: "Lato B";
+    margin-top: 15px;
+    font-size: 20px;
+}
 
+#ordernar{
+    background-color: #fbf2ea;
+    border: 1px solid rgba(0,0,0,0.7);
+    border-radius: 15px;
+    font-size: 16px;
+    font-family: Lato;
+    width: 8%;
 }
 
 
 .filter{
+    position: relative;
     display: inline-block;
     top: 5%;
     margin-left: 50px;
@@ -25,4 +41,12 @@
     background-color: #faefe6;
     border:3px solid rgba(0,0,0,0.7);
     border-radius: 25px;
+}
+.result{
+    overflow-x: auto;
+    position: relative;
+    top: 5%;
+    float:right;
+    width: 75%;
+    height:750px;
 }

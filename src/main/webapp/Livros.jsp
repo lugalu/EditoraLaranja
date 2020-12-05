@@ -25,16 +25,18 @@
 </nav>
 <input type="text" class="search" placeholder="Pesquisar"/>
 <label></label>
-
-<br>
-<div class="filter">
-    <label>Ordernar por: </label>
+<label id="ordernarLabel">Ordernar por:
     <select name="ordernar" id="ordernar">
         <option value="bestSeller">Mais vendidos</option>
         <option value="worstSeller">Menos vendidos</option>
         <option value="AlphabetDescending">Ordem A-Z</option>
         <option value="AlphabetAscending">Ordem Z-A</option>
     </select>
+</label>
+<br>
+<div class="filter">
+
 </div>
+<div class="result"></div>
 </body>
 </html>
