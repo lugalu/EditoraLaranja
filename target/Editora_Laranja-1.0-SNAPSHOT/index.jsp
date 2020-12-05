@@ -10,16 +10,25 @@
 <head>
     <title>Editora Laranja</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/Style.css">
 </head>
 <body>
     <nav class = "navbar">
-
+        <ul>
+            <li><a href="">Home </a></li>|
+            <li><a href="">Livros </a></li>|
+            <li><a href="">Catálogo </a></li>|
+            <li><a href="">Livrarias </a></li>|
+            <li><a href="">Autor </a></li>|
+            <li><a href="">Jornal</a></li>
+        </ul>
     </nav>
 
     <div class = "imageDiv">
         <img src="assets\livro1.jpg">
-        <div class="centerLeft"><pre> Visualizar os <br>  dez livros <br> mais vendidos</pre></div>
-        <button class="buttonOffsetLeft">Ir agora</button>
+        <div class="center"><pre> Visualizar os <br>  dez livros <br> mais vendidos</pre></div>
+        <button class="buttonOffset">Ir agora</button>
     </div>
 
     <div class = "imageDiv">
@@ -30,8 +39,8 @@
 
     <div class = "imageDiv">
         <img src="assets\catalogo.jpg">
-        <div class = "centerRight"><pre> Acompanhe a <br> situação das <br>  livrarias  </pre></div>
-        <button class="buttonOffsetRight">Ir agora</button>
+        <div class = "center"><pre> Acompanhe a <br> situação das <br>  livrarias  </pre></div>
+        <button class="buttonOffset">Ir agora</button>
     </div>
 </body>
 </html>
