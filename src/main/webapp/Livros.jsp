@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<html lang="pt">
 <head>
     <title>Editora Laranja</title>
     <link rel="stylesheet" href="css/Style.css">
@@ -35,7 +35,7 @@
 </label>
 <br>
 <div class="filter">
-    <form action="LivrosController" method="post">
+    <form action="LivroController" method="post">
 
     </form>
 </div>
