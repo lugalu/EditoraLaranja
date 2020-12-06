@@ -18,13 +18,15 @@ public class LivroDAO {
     }
 
     public boolean insert(LivroBean livro) {
-        String sql = "insert into livro(titulo,descricao,categoria) values (?,?,?) ";
+        String sql = "insert into livro(autorID, titulo,descricao,categoria) values (?,?,?,?) ";
 
         try {
             ps = conn.prepareStatement(sql);
-            ps.setString(1,livro.getTitulo());
-            ps.setString(2, livro.getDescricao());
-            ps.setString(3, livro.getCategorias());
+
+            ps.setInt(1, 1);
+            ps.setString(2,livro.getTitulo());
+            ps.setString(3, livro.getDescricao());
+            ps.setString(4, livro.getCategorias());
             ps.execute();
             ps.close();
             System.out.println(livro.getTitulo());
