@@ -31,8 +31,8 @@
 <div class="Cadastro">
     <form action="LivroController" method="POST">
         <input type="text" name="titulo" placeholder="Título" required/>
-        <input type="text" name="descricao" placeholder="Descricao" required/>
         <input type="text" name="categoria" placeholder="Categoria" required/>
+        <textarea type="text" name="descricao" placeholder="Descricao" required></textarea>
         <br>
         <select id="idAutor" name="idAutor">
             <c:forEach items="${autores}" var="autor">

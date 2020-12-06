@@ -28,7 +28,7 @@ button{
     left: 0;
 }
 
-input[type=text]{
+input[type=text], textarea, select{
     width: 80%;
     padding-top: 15px;
     padding-bottom: 15px;

@@ -10,7 +10,7 @@
 <head>
     <title>Autor</title>
     <link rel="stylesheet" href="css/Style.css">
-    <link rel="stylesheet" href="css/AutorStyle.css">
+    <link rel="stylesheet" href="css/RegisterStyle.css">
 </head>
 <body>
 <nav class = "navbar">
@@ -22,7 +22,18 @@
         <li><a href="Autor.jsp">Autor </a></li>|
         <li><a href="Jornal.jsp">Jornal</a></li>
     </ul>
-
 </nav>
+<br>
+<div class="Cadastro">
+    <form action="AutorController" method="POST">
+        <input type="text" name="nome" placeholder="nome" required/>
+        <input type="text" name="email" placeholder="email" required/>
+        <input type="text" name="telefone" placeholder="telefone" required/>
+        <input type="text" name="cpf" placeholder="cpf" required/>
+
+        <button type="submit" id="buttonSub" name="buttonSub" value="ADD">Enviar</button>
+    </form>
+</div>
+
 </body>
 </html>

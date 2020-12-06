@@ -31,7 +31,6 @@ public class AutorController extends HttpServlet {
                 }else{
                     System.out.println("Erro!!!");
                 }
-
                 break;
             case "Retrieve":
 
