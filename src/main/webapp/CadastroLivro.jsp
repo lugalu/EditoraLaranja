@@ -8,9 +8,35 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Cadastro de livro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/Style.css">
 </head>
 <body>
+
+<nav class = "navbar">
+    <ul>
+        <li><a href="index.jsp">Home </a></li>|
+        <li><a href="Livros.jsp">Livros </a></li>|
+        <li><a href="Catalogo.jsp">Catálogo </a></li>|
+        <li><a href="Livraria.jsp">Livrarias </a></li>|
+        <li><a href="Autor.jsp">Autor </a></li>|
+        <li><a href="Jornal.jsp">Jornal</a></li>
+    </ul>
+</nav>
+<br>
+
+<form action="LivroController" method="POST">
+
+        <input type="text" name="titulo" placeholder="Título" required/>
+    <br>
+        <input type="text" name="descricao" placeholder="Descricao"/>
+    <br>
+        <input type="text" name="categoria" placeholder="Categoria" required/>
+    <br>
+
+</form>
+
 
 </body>
 </html>
