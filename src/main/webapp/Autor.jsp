@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Autor</title>
     <link rel="stylesheet" href="css/Style.css">
     <link rel="stylesheet" href="css/AutorStyle.css">
 </head>
@@ -21,6 +21,9 @@
         <li><a href="Livraria.jsp">Livrarias </a></li>|
         <li><a href="Autor.jsp">Autor </a></li>|
         <li><a href="Jornal.jsp">Jornal</a></li>
+    </ul>
+    <ul id="ulRight">
+        <li><a href="CadastroLivro.jsp">Cadastro autor</a></li>
     </ul>
 </nav>
 </body>
