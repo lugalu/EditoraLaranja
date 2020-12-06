@@ -1,5 +1,7 @@
 package br.com.EditoraLaranja.Controller;
 
+import br.com.EditoraLaranja.BO.LivroBO;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,10 +11,21 @@ import java.io.IOException;
 
 @WebServlet("/LivroController")
 public class LivroController extends HttpServlet {
-
+    LivroBO livro = new LivroBO();
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String titulo = req.getParameter("titulo");
+        String descricao = req.getParameter("descricao");
+        String categoria = req.getParameter("categoria");
 
+        boolean resultado = livro.insert(titulo, descricao, categoria);
+
+        if(resultado){
+            System.out.println("Livro cadastrado!!!");
+            req.getRequestDispatcher("index.jsp").forward(req, resp);
+        }else{
+            System.out.println("Erro!!!");
+        }
     }
 }

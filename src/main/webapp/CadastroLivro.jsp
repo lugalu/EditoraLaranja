@@ -26,6 +26,7 @@
 </nav>
 <br>
 
+<div class = "Cadastro">
 <form action="LivroController" method="POST">
 
         <input type="text" name="titulo" placeholder="Título" required/>
@@ -34,8 +35,10 @@
     <br>
         <input type="text" name="categoria" placeholder="Categoria" required/>
     <br>
-
+        <button type="submit" value="Add">Enviar</button>
+    <br>
 </form>
+</div>
 
 
 </body>
