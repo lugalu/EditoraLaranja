@@ -22,7 +22,14 @@
         <li><a href="Autor.jsp">Autor </a></li>|
         <li><a href="Jornal.jsp">Jornal</a></li>
     </ul>
+    <ul>
+        <li><a href="">Home </a></li>
+    </ul>
 </nav>
+
+
+
+
 <input type="text" class="search" placeholder="Pesquisar"/>
 <label></label>
 <label id="ordernarLabel">Ordernar por:
