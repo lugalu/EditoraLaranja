@@ -8,6 +8,7 @@
       <jdbc-url>jdbc:mysql://localhost:3306/editora</jdbc-url>
       <driver-properties>
         <property name="serverTimezone" value="UTC" />
+        <property name="sslMode" value="DISABLED" />
       </driver-properties>
     </data-source>
   </component>

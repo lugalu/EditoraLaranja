@@ -34,13 +34,13 @@
         <input type="text" name="descricao" placeholder="Descricao" required/>
         <input type="text" name="categoria" placeholder="Categoria" required/>
         <br>
-        <select>
+        <select id="idAutor" name="idAutor">
             <c:forEach items="${autores}" var="autor">
                 <option value="${autor.getAutorId()}">${autor.getNome()}</option>
             </c:forEach>
         </select>
         <br>
-        <button type="submit" id="buttonSub" name="buttonSub" value="Add">Enviar</button>
+        <button type="submit" id="buttonSub" name="buttonSub" value="ADD">Enviar</button>
     </form>
 </div>
 

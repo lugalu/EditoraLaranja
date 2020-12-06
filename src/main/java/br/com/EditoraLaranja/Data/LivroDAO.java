@@ -23,7 +23,7 @@ public class LivroDAO {
         try {
             ps = conn.prepareStatement(sql);
 
-            ps.setInt(1, 1);
+            ps.setInt(1, livro.getIdAutor());
             ps.setString(2,livro.getTitulo());
             ps.setString(3, livro.getDescricao());
             ps.setString(4, livro.getCategorias());
@@ -46,12 +46,16 @@ public class LivroDAO {
         try {
             ps = conn.prepareStatement(sql);
             rs = ps.executeQuery();
-            ps.close();
+
             while (rs.next()){
-                LivroBean temp = new LivroBean(rs.getString("titulo"),rs.getString("descricao"),rs.getString("categoria"));
+                LivroBean temp = new LivroBean(rs.getString("titulo"),
+                        rs.getString("descricao"),
+                        rs.getString("categoria"));
+                temp.setIdAutor(rs.getInt("autorID"));
+                temp.setIdLivro(rs.getInt("livroID"));
                 livros.add(temp);
             }
-
+            ps.close();
             return livros;
         } catch (Exception e) {
             System.out.println(e);

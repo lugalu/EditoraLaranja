@@ -39,7 +39,6 @@ public class AutorDAO {
                 autores.add(temp);
             }
             ps.close();
-            System.out.println(autores);
             return autores;
 
         }catch (Exception e){

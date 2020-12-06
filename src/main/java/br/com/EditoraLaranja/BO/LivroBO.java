@@ -7,11 +7,14 @@ import java.util.ArrayList;
 
 public class LivroBO {
 
-    public LivroBO(){};
+    public LivroBO(){}
 
-    public boolean insert(String titulo,String descricao,String categoria){
+    public boolean insert(String titulo,String descricao,String categoria,int id){
         LivroDAO livro = new LivroDAO();
-        return livro.insert(new LivroBean(titulo, descricao, categoria));
+        LivroBean temp = new LivroBean(titulo, descricao, categoria);
+        temp.setIdAutor(id);
+        System.out.println(id);
+        return livro.insert(temp);
     }
 
 

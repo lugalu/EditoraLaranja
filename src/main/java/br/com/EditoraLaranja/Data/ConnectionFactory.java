@@ -5,12 +5,13 @@ import java.sql.DriverManager;
 
 public class ConnectionFactory  {
     public Connection getConnection(){
-        String url = "jdbc:mysql://127.0.0.1:3306/editora";
+        String url = "jdbc:mysql://127.0.0.1:3306/editora?useSSL=false";
         String user = "root";
-        String password = "Zeca1234.";
+        String password = "123456";
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
+            System.out.println("conn");
             return DriverManager.getConnection(url,user,password);
         }catch(Exception e) {
             throw new RuntimeException("conexao falhou "+e);

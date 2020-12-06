@@ -23,9 +23,9 @@ public class LivroController extends HttpServlet {
                 String titulo = req.getParameter("titulo");
                 String descricao = req.getParameter("descricao");
                 String categoria = req.getParameter("categoria");
-
-                boolean resultado = livro.insert(titulo, descricao, categoria);
-
+                int id = Integer.parseInt(req.getParameter("idAutor"));
+                boolean resultado = livro.insert(titulo, descricao, categoria,id);
+                System.out.println(resultado);
                 if(resultado){
                     System.out.println("Livro cadastrado!!!");
                     req.getRequestDispatcher("index.jsp").forward(req, resp);
