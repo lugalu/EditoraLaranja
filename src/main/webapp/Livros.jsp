@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html lang="pt">
 <head>
     <title>Editora Laranja</title>
@@ -34,8 +35,6 @@
 <label></label>
 <label id="ordernarLabel">Ordernar por:
     <select name="ordernar" id="ordernar">
-        <option value="bestSeller">Mais vendidos</option>
-        <option value="worstSeller">Menos vendidos</option>
         <option value="AlphabetDescending">Ordem A-Z</option>
         <option value="AlphabetAscending">Ordem Z-A</option>
     </select>

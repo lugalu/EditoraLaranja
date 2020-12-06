@@ -1,6 +1,6 @@
 package br.com.EditoraLaranja.Bean;
 
-import java.util.ArrayList;
+
 
 public class LivroBean {
     private int idLivro;

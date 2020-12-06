@@ -1,0 +1,47 @@
+button{
+    background-color: rgba(236, 238, 167, 1);
+    color: #000000;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    font-family: Lato;
+    font-size: 18px;
+    width: 80%;
+    opacity: 100%;
+    border-radius: 10px;
+}
+
+.cadastro{
+    text-align: center;
+    position: relative;
+    top: 4.5%;
+    left: 35%;
+    background-color: #f8e1ce;
+    color: #ffffff;
+    width: 30%;
+
+}
+.cadastro form{
+    padding: 0px;
+    text-align: center;
+    bottom: 0%;
+    left: 0%;
+}
+
+input[type=text]{
+    width: 80%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 0px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    font-family: Lato;
+    font-size: 18px;
+    background: #f1f1f1;
+}
+
+select{
+    display: inline-block;
+}
