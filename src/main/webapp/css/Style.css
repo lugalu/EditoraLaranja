@@ -50,6 +50,11 @@ ul a{
     text-decoration: none;
 }
 
+#ulRight{
+    position: relative;
+    right: -65%;
+}
+
 .imageDiv{
     position: relative;
     width: 25%;
