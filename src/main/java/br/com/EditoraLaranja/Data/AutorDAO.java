@@ -17,7 +17,23 @@ public class AutorDAO {
     }
 
     public boolean insert(AutorBean autor){
-        return true;
+        String sql = "insert into autor(nome,email,telefone,cpf) values (?,?,?,?)";
+
+        try{
+            ps = conn.prepareStatement(sql);
+
+            ps.setString(1,autor.getNome());
+            ps.setString(2,autor.getEmail());
+            ps.setString(3,autor.getTelefone());
+            ps.setString(4,autor.getCpf());
+            ps.execute();
+            ps.close();
+            return true;
+        }catch (Exception e){
+            return false;
+        }
+
+
     }
 
     public ArrayList<AutorBean> retrieve(){

@@ -22,9 +22,7 @@
         <li><a href="Autor.jsp">Autor </a></li>|
         <li><a href="Jornal.jsp">Jornal</a></li>
     </ul>
-    <ul id="ulRight">
-        <li><a href="CadastroAutor.jsp">Cadastro autor</a></li>
-    </ul>
+
 </nav>
 </body>
 </html>
