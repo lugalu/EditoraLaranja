@@ -24,7 +24,9 @@
         <li><a href="Jornal.jsp">Jornal</a></li>
     </ul>
     <ul id="ulRight">
-        <li><a href="CadastroLivro.jsp">Cadastro livro</a></li>
+        <li><form method="Post" action="LivroController">
+            <button type="submit" id="buttonSub" name="buttonSub" value="Register">Cadastro Livro</button>
+        </form></li>
     </ul>
 </nav>
 

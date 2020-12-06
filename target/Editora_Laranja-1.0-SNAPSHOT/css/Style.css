@@ -54,6 +54,20 @@ ul a{
     position: relative;
     right: -65%;
 }
+#ulRight li form{
+    display: inline-block;
+    position: fixed;
+    padding: 0;
+    text-align: center;
+    top: 0.2%;
+  right: 0%;
+    left: 90%;
+}
+#ulRight li form button{
+    font-family: Lato,sans-serif;
+    font-size: 18px;
+    ;
+}
 
 .imageDiv{
     position: relative;

@@ -1,5 +1,6 @@
 package br.com.EditoraLaranja.Controller;
 
+import br.com.EditoraLaranja.BO.AutorBO;
 import br.com.EditoraLaranja.BO.LivroBO;
 
 import javax.servlet.ServletException;
@@ -15,17 +16,34 @@ public class LivroController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String titulo = req.getParameter("titulo");
-        String descricao = req.getParameter("descricao");
-        String categoria = req.getParameter("categoria");
+        String action = req.getParameter("buttonSub");
 
-        boolean resultado = livro.insert(titulo, descricao, categoria);
+        switch(action){
+            case "ADD":
+                String titulo = req.getParameter("titulo");
+                String descricao = req.getParameter("descricao");
+                String categoria = req.getParameter("categoria");
 
-        if(resultado){
-            System.out.println("Livro cadastrado!!!");
-            req.getRequestDispatcher("index.jsp").forward(req, resp);
-        }else{
-            System.out.println("Erro!!!");
+                boolean resultado = livro.insert(titulo, descricao, categoria);
+
+                if(resultado){
+                    System.out.println("Livro cadastrado!!!");
+                    req.getRequestDispatcher("index.jsp").forward(req, resp);
+                }else{
+                    System.out.println("Erro!!!");
+                }
+                break;
+            case "Register":
+                AutorBO autores = new AutorBO();
+                req.setAttribute("autores",autores.retrieve());
+                req.getRequestDispatcher("CadastroLivro.jsp").forward(req,resp);
+                break;
+            case "Retrieve":
+                break;
+            default:
+                break;
         }
+
+
     }
 }

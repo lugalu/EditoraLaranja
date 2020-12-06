@@ -31,16 +31,16 @@
 <div class="Cadastro">
     <form action="LivroController" method="POST">
         <input type="text" name="titulo" placeholder="Título" required/>
-        <input type="text" name="descricao" placeholder="Descricao"/>
+        <input type="text" name="descricao" placeholder="Descricao" required/>
         <input type="text" name="categoria" placeholder="Categoria" required/>
         <br>
         <select>
             <c:forEach items="${autores}" var="autor">
-                <option value="${autor.getID()}">${autor.getName()}</option>
+                <option value="${autor.getAutorId()}">${autor.getNome()}</option>
             </c:forEach>
         </select>
         <br>
-        <button type="submit" value="Add">Enviar</button>
+        <button type="submit" id="buttonSub" name="buttonSub" value="Add">Enviar</button>
     </form>
 </div>
 
