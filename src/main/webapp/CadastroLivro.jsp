@@ -29,7 +29,8 @@
 <br>
 
 <div class="Cadastro">
-    <form action="LivroController" method="POST">
+    <form action="LivroController" method="POST" enctype="multipart/form-data">
+        <input type="file" accept="image/*" name="image" id="image"/>
         <input type="text" name="titulo" placeholder="Título" required/>
         <input type="text" name="categoria" placeholder="Categoria" required/>
         <textarea type="text" name="descricao" placeholder="Descricao" required></textarea>

@@ -1,6 +1,7 @@
 package br.com.EditoraLaranja.Bean;
 
 
+import java.util.Base64;
 
 public class LivroBean {
     private int idLivro;
@@ -9,11 +10,14 @@ public class LivroBean {
     private String descricao;
     private String categoria;
     private String dataLancamento;
+    private byte[] image;
 
-    public LivroBean(String titulo,String descricao,String categoria){
+    public LivroBean(String titulo,String descricao,String categoria, byte[] image, int idAutor){
         setTitulo(titulo);
         setDescricao(descricao);
         setCategorias(categoria);
+        setImage(image);
+        setIdAutor(idAutor);
     }
 
     public int getIdLivro() {
@@ -58,5 +62,22 @@ public class LivroBean {
 
     private void setCategorias(String categorias) {
         this.categoria = categorias;
+    }
+
+    public String getImage() {
+        String base64 = Base64.getEncoder().encodeToString(image);
+        return "data:image/jpeg;base64," + base64;
+    }
+
+    public byte[] getImageBytes() {
+        return this.image;
+    }
+
+    public void setImage(byte[] image) {
+        if(image.length == 0) {
+            throw new IllegalArgumentException("image can't be empty");
+        } else {
+            this.image = image;
+        }
     }
 }

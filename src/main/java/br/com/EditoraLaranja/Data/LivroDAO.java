@@ -18,7 +18,7 @@ public class LivroDAO {
     }
 
     public boolean insert(LivroBean livro) {
-        String sql = "insert into livro(autorID, titulo,descricao,categoria) values (?,?,?,?) ";
+        String sql = "insert into livro(autorID,titulo,descricao,categoria, image) values (?,?,?,?,?) ";
 
         try {
             ps = conn.prepareStatement(sql);
@@ -27,6 +27,7 @@ public class LivroDAO {
             ps.setString(2,livro.getTitulo());
             ps.setString(3, livro.getDescricao());
             ps.setString(4, livro.getCategorias());
+            ps.setBytes(5, livro.getImageBytes());
             ps.execute();
             ps.close();
             System.out.println(livro.getTitulo());
@@ -50,8 +51,9 @@ public class LivroDAO {
             while (rs.next()){
                 LivroBean temp = new LivroBean(rs.getString("titulo"),
                         rs.getString("descricao"),
-                        rs.getString("categoria"));
-                temp.setIdAutor(rs.getInt("autorID"));
+                        rs.getString("categoria"),
+                        rs.getBytes("image"),
+                        rs.getInt("autorID"));
                 temp.setIdLivro(rs.getInt("livroID"));
                 livros.add(temp);
             }

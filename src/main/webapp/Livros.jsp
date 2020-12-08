@@ -12,6 +12,7 @@
     <title>Editora Laranja</title>
     <link rel="stylesheet" href="css/Style.css">
     <link rel="stylesheet" href="css/LivrosStyle.css">
+    <script src="js/livro.js"></script>
 </head>
 <body>
 <nav class = "navbar">
@@ -31,22 +32,44 @@
 </nav>
 
 
+<div>
+    <c:choose>
+        <c:when test="${autores != null}">
+            <form action="LivroController" method="get" style="display: none">
+                <input type="submit" value="Recarregar Livros"/>
+            </form>
+        </c:when>
+        <c:when test="${autores == null}">
+            <form action="LivroController" method="get" name="reload-books" style="display: none">
+                <input type="submit" value="Recarregar Livros"/>
+            </form>
+        </c:when>
+    </c:choose>
 
 
-<input type="text" class="search" placeholder="Pesquisar"/>
-<label></label>
-<label id="ordernarLabel">Ordernar por:
-    <select name="ordernar" id="ordernar">
-        <option value="AlphabetDescending">Ordem A-Z</option>
-        <option value="AlphabetAscending">Ordem Z-A</option>
-    </select>
-</label>
-<br>
-<div class="filter">
-    <form action="LivroController" method="post">
 
-    </form>
 </div>
-<div class="result"></div>
+
+
+
+<c:forEach items="${livros}" var="livro">
+    <div class="cell">
+        <div class="cell-container">
+            <img class="cell-image" src="${livro.image}">
+            <div class="cell-information">
+                <label class="cell-title">${livro.titulo}</label>
+                <c:forEach items="${autores}" var="autor">
+                    <c:if test="${autor.autorId == livro.idAutor}">
+                        <label class="cell-subtitle">${autor.nome}</label>
+                    </c:if>
+                </c:forEach>
+            </div>
+            <button class="cell-button" type="button">+ Ver Detalhes</button>
+        </div>
+    </div>
+</c:forEach>
+
+
+
 </body>
 </html>
