@@ -1,5 +1,5 @@
 # EditoraLaranja - software Engineering class<br>
-This project consists in a small website for a publisher, based on a RDD we developed through the classes and assigments of our professor Braga.
+This project consists in a small website for a publisher, based on a RDD we developed through the classes and assigments of our professor: Braga.
 <br>
 <br>
 <h2>Content</h2>
